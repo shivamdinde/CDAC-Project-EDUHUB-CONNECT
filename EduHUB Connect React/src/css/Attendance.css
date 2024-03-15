@@ -1,0 +1,33 @@
+
+.attendance-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.attendance-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+.button-group .btn {
+  margin-right: 10px;
+}
+
+.attendance-list {
+  text-align: left;
+}
+
+.attendance-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attendance-list ul li {
+  margin-bottom: 10px;
+}
+
+/* Add more custom styles as needed */

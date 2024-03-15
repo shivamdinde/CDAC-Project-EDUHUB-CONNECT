@@ -1,0 +1,20 @@
+.spectrum-background {
+  background: rgb(197, 237, 244);
+  background: linear-gradient(90deg , #D7DAF2 0%, #C5EDF4 70%);
+  background-blend-mode: screen;
+}
+.spectrum-background-reverse {
+  background: rgb(197, 237, 244);
+  background: linear-gradient(90deg , #C5EDF4 10%, #D7DAF2 70%);
+  background-blend-mode: screen;
+}
+.spectrum-background-reverse2 {
+  background: rgb(197, 237, 244);
+  background: linear-gradient(90deg , #d7daf2 10%, #818291 70%);
+  background-blend-mode: screen;
+}
+.spectrum-background-reverse3 {
+  background: rgb(197, 237, 244);
+  background: linear-gradient(90deg , #d7daf2 10%, #f88379 70%);
+  background-blend-mode: screen;
+}
