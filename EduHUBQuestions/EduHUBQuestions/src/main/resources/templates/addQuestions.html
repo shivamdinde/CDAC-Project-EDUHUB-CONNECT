@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question</title>
+</head>
+<body>
+    <h1>Add Question</h1>
+    <div style="box-align: center;">
+		<div th:if=${successMessage} class="alert alert-success" role="alert">
+        <span th:text="${successMessage}"></span>
+    </div>
+    <br>
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <span th:text="${error}"></span>
+    </div>
+    <form action="/addQuestions" method="post">
+        <label for="category">Category:</label><br>
+        <select id="category" name="category">
+            <option th:each="category : ${category}" th:value="${category.id}" th:text="${category.subjectName}"></option>
+        </select><br>
+        
+       <!-- <label for="difficultyLevel">Difficulty Level:</label><br>
+        <select id="difficultyLevel" name="difficultyLevel">
+            <option value="EASY">Easy</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="HARD">Hard</option>
+        </select>-->
+        <label for="difficultyLevel">Difficulty Level:</label><br>
+        <select id="difficultyLevel" name="difficultyLevel">
+            <option th:each="level : ${T(CDAC.EduHUBQuestions.model.DifficultyLevel).values()}"
+                    th:value="${level}" th:text="${#strings.capitalize(level.toString().toLowerCase())}">
+            </option>
+        </select>
+        <br>
+            <label for="questionTitle">Question Title:</label><br>
+        <input type="text" id="questionTitle" name="questionTitle"><br>
+        
+        <label for="option1">Option 1:</label><br>
+        <input type="text" id="option1" name="option1"><br>
+        
+        <label for="option2">Option 2:</label><br>
+        <input type="text" id="option2" name="option2"><br>
+        
+        <label for="option3">Option 3:</label><br>
+        <input type="text" id="option3" name="option3"><br>
+        
+        <label for="option4">Option 4:</label><br>
+        <input type="text" id="option4" name="option4"><br>
+                
+        <label for="rightAnswer">Right Answer:</label><br>
+        <input type="text" id="rightAnswer" name="rightAnswer"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script> </script>
+</body>
+</html>
