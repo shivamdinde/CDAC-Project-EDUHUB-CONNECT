@@ -1,0 +1,30 @@
+<!-- teacher.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Teacher</title>
+</head>
+<body>
+	
+	<div>
+		<div th:if=${successMessage} class="alert alert-success" role="alert">
+        <span th:text="${successMessage}"></span>
+    </div>
+    
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <span th:text="${error}"></span>
+    </div>
+	</div>
+    <h2>Add Teacher</h2>
+    <form action="/addTeacher" method="post">
+        <label for="teacherName">Name:</label><br>
+        <input type="text" id="teacherName" name="teacherName"><br>
+        <label for="phoneNo">PhoneNo:</label><br>
+        <input type="number" id="phoneNo" name="phoneNo"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

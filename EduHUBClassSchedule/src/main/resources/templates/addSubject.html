@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		
+		<div style="box-align: center;">
+		<div th:if=${successMessage} class="alert alert-success" role="alert">
+        <span th:text="${successMessage}"></span>
+    </div>
+    
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <span th:text="${error}"></span>
+    </div>
+		 <h1>ADD a SUBJECT </h1>
+		<form action="/addSubject" method="post">
+
+        <label for="subjectCode">Subject Code:</label>
+        <input type="text" id="subjectCode" name="subjectCode" placeholder="Enter subject code"><br>
+
+		<label for="subjectName">Subject Name:</label>
+        <input type="text" id="subjectName" name="subjectName" placeholder="Enter subject name"><br>
+
+      	 <input type="submit" value="Submit">
+    </form>
+		</div>
+		
+		
+		
+</body>
+</html>

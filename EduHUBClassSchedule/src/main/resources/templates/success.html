@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h2>Class Schedule Page	</h2>
+	<br>
+	
+	<h2>Full Class Schedule</h2>
+    <br>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Subject Code</th>
+                <th>Subject Name</th>
+                <th>Teacher Name</th>
+                <th>Time</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="schedule : ${schedules}">
+                <td th:text="${schedule.subject.subjectCode}"></td>
+                <td th:text="${schedule.subject.subjectName}"></td>
+                <td th:text="${schedule.teacher.teacherName}"></td>
+                <td th:text="${schedule.time}"></td>
+                <td th:text="${schedule.date}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

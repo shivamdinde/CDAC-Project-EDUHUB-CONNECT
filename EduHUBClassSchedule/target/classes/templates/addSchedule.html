@@ -1,0 +1,41 @@
+<!-- schedule.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Class Schedule</title>
+</head>
+<body>
+    <h2>Add Class Schedule</h2>
+    
+    <div style="box-align: center;">
+		<div th:if=${successMessage} class="alert alert-success" role="alert">
+        <span th:text="${successMessage}"></span>
+    </div>
+    <br>
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <span th:text="${error}"></span>
+    </div>
+    <br>
+    
+    <form action="/addSchedule" method="post">
+		
+		
+        <label for="teacher">Select Teacher:</label><br>
+        <select id="teacher" name="teacher">
+            <option th:each="teacher : ${teachers}" th:value="${teacher.id}" th:text="${teacher.teacherName}"></option>
+        </select><br>
+        <label for="subject">Select Subject:</label><br>
+        <select id="subject" name="subject">
+            <option th:each="subject : ${subjects}" th:value="${subject.id}" th:text="${subject.subjectName}"></option>
+        </select><br>
+        
+        
+        <label for="time">Time:</label><br>
+        <input type="text" id="time" name="time"><br>
+        <label for="date">Date:</label><br>
+        <input type="text" id="date" name="date"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
