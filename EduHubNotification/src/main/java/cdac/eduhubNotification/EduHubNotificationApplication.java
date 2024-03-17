@@ -12,8 +12,8 @@ public class EduHubNotificationApplication {
 		SpringApplication.run(EduHubNotificationApplication.class, args);
 	}
 
-    private final static String ACCOUNT_SID = "ACcd67df4ba276a0b2c0db62904eff6a16"; 
-    private final static String AUTH_ID = "d7bb92b83e32465ca6655c7e1710d508"; 
+    private final static String ACCOUNT_SID = ""; 
+    private final static String AUTH_ID = ""; 
        
       
     static { 
